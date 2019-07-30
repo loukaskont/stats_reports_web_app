@@ -15,7 +15,7 @@ namespace statistika_net4.statistika
     {
         public String baseUrl = "http://geo.team-pad.com/api/yourId/sheets/";
         Dictionary<String, String> workspacesSheets = new Dictionary<String, String>();
-        String geoutilsConnstring = "User Id=its;Password=1;Server=192.168.22.21;Port=5432;Database=geoutils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
+        String geoutilsConnstring = "User Id=its;Password=1;Server=192.168.24.24;Port=5432;Database=geoutils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
 
         public void insertStats()
         {
@@ -178,7 +178,7 @@ namespace statistika_net4.statistika
 
         private Boolean searchForWorkSpaces()
         {
-            String connstring = "User Id=its;Password=1;Server=192.168.22.21;Port=5432;Database=geoutils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
+            String connstring = "User Id=its;Password=1;Server=192.168.27.55;Port=5432;Database=geoutils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
             NpgsqlConnection conn = new NpgsqlConnection(connstring);
             conn.Open();
             String sql = "select * from geoutils.public.teampad_stats_sheets;";
