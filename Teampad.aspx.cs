@@ -60,7 +60,7 @@ namespace Statistika.statistika
         {
             String currentDate = DateTime.Now.AddDays(-1).ToString("yyy-MM-dd");
             String currentDataBase = "geoutils";
-            String connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.22.21;Port=5432;Database=" + currentDataBase + ";Pooling=false;Preload Reader=true;CommandTimeout=10000";
+            String connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.65.26;Port=5432;Database=" + currentDataBase + ";Pooling=false;Preload Reader=true;CommandTimeout=10000";
             NpgsqlConnection conn = new NpgsqlConnection(connstring);
             conn.Open();
             String sqlSelectTeampadStats = "select stat_date,workspace_name,oloklir_mix,oloklir_nom,mi_oloklir_mix,mi_oloklir_nom,olokliromena,mi_olokliromena from stats_teampad where stat_date = '" + currentDate + "' and workspace_name = '" + workSpace + "';";
@@ -218,7 +218,7 @@ namespace Statistika.statistika
 
         private Boolean searchForWorkSpaces()
         {
-            String connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.22.21;Port=5432;Database=geoutils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
+            String connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.24.45;Port=5432;Database=geoutils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
             NpgsqlConnection conn = new NpgsqlConnection(connstring);
             conn.Open();
             String sql = "select * from geoutils.public.teampad_stats_sheets;";
