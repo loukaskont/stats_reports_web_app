@@ -40,7 +40,7 @@ namespace statistika_net4.statistika
         private void selectToStatTable()
         {
             String currentDataBase = DropDownListDatabase.SelectedValue;
-            String connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.22.21;Port=5432;Database=geoutils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
+            String connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.23.28;Port=5432;Database=geouyuuyiitils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
             NpgsqlConnection conn = new NpgsqlConnection(connstring);
             conn.Open();
             String startDate = CalendarStart.SelectedDate.ToString("yyyy-MM-dd");
