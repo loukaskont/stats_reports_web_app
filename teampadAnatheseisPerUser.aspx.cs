@@ -23,7 +23,7 @@ namespace statistika_net4.statistika
                 User_Id = this.Session["uname"].ToString();
                 Password = this.Session["pass"].ToString();
             }
-            String connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.22.21;Port=5432;Database=geoutils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
+            String connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.12.25;Port=5432;Database=geookoutjjils;Pooling=false;Preload Reader=true;CommandTimeout=10000";
             NpgsqlConnection conn = new NpgsqlConnection(connstring);
             conn.Open();
             String sqlSelectTeampadStats = "select full_name, a.anatheseis from teampad_users_anatheseis a left join teampad_users b on a.teampad_id = b.teampad_id where full_name <> '';";
