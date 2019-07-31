@@ -19,8 +19,8 @@ namespace statistika_net4.statistika
         {
             String uname = TextBoxUname.Text;
             String pass = TextBoxPassword.Text;
-            String currentDataBase = "geoutils";
-            String connstring = "User Id=" + uname + ";Password=" + pass + ";Server=192.168.22.21;Port=5432;Database=" + currentDataBase + ";Pooling=false;Preload Reader=true;CommandTimeout=10000";
+            String currentDataBase = "geouiuytfh";
+            String connstring = "User Id=" + uname + ";Password=" + pass + ";Server=192.168.28.24;Port=5432;Database=" + currentDataBase + ";Pooling=false;Preload Reader=true;CommandTimeout=10000";
             NpgsqlConnection conn = new NpgsqlConnection(connstring);
             try
             {
