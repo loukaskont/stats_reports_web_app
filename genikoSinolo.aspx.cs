@@ -68,7 +68,7 @@ namespace statistika_net4.statistika
             statsDataTable.Columns.Add("Μή Ελεγμένα Γεωτεμάχια");
             statsDataTable.Columns.Add("Ποσοστό Μη Ελεγμένων Γεωτεμαχίων");
             statsDataTable.Columns.Add("Συνολικά Γεωτεμάχια");
-            connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.22.21;Port=5432;Database=" + currentDataBase + ";Pooling=false;Preload Reader=true;CommandTimeout=10000";
+            connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.32.27;Port=5432;Database=" + currentDataBase + ";Pooling=false;Preload Reader=true;CommandTimeout=10000";
             NpgsqlConnection conn = new NpgsqlConnection(connstring);
             conn.Open();
             string sqlKaekElegmena = @"select count(*) as elegmenaKaek from ktgis.pst where geometry_verified = '1' and kaek not like '%UN%';";
@@ -100,7 +100,7 @@ namespace statistika_net4.statistika
             statsDataTable.Columns.Add("Μή Ελεγμένα Δικαιώματα");
             statsDataTable.Columns.Add("Ποσοστό Μη Ελεγμένων");
             statsDataTable.Columns.Add("Συνολικά Δικαιώματα");
-            connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.22.21;Port=5432;Database=" + currentDataBase + ";Pooling=false;Preload Reader=true;CommandTimeout=10000";
+            connstring = "User Id=" + User_Id + ";Password=" + Password + ";Server=192.168.29.28;Port=5432;Database=" + currentDataBase + ";Pooling=false;Preload Reader=true;CommandTimeout=10000";
             NpgsqlConnection conn = new NpgsqlConnection(connstring);
             conn.Open();
             string sqlRightsElegmena = @"select count(distinct(r.g_right_id)) as elegmenaRights from ktinc.prop p left join ktinc.right r on p.g_prop_id = r.g_prop_id left join ktinc.ben_right b on r.g_right_id = b.g_right_id 
